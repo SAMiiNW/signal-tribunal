@@ -1,0 +1,37 @@
+{
+  "resolutionId": "ST-1788573405",
+  "transactions": {
+    "propose": "0x8a2ff95d248f5e42ed7c25f8ef4000615ee7797d3dde5344e042cc6871b2aebd",
+    "assess": "0xf99f5b732affeb2b930abcf5d8637642e599d047869cc66a744064b8fd9115c7",
+    "challenge": "0x2212281422e529325770f1888e30c25f27fd4ae3cd8a4394acb1b20ebbc1ef4c",
+    "finalize": "0x0cb6cd6b6d81caa5fc3b4367304d21e610ef9dfc53f8e6ca34e7841a80f1bed2"
+  },
+  "state": {
+    "answer": "PASSED",
+    "challengeEnd": 1788574012,
+    "challengeSource": "https://github.com/SAMiiNW/signal-tribunal/raw/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/appeal-record.txt",
+    "challenger": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
+    "choices": [
+      "FAILED",
+      "PASSED"
+    ],
+    "digests": [
+      "b7385035fb371e54f8d878b43d16ff191c7d51454faf31e8572b91dde69763e5",
+      "21dcd2bfd3fc318ebea3ed0b3217104e42667c87663e634f930f132b03839b71",
+      "09323c11bf2025863dcc921896b4af42c0c5263539ed1b5f6861611e97b40815"
+    ],
+    "findings": [
+      "0",
+      "1",
+      "2"
+    ],
+    "id": "ST-1788573405",
+    "owner": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
+    "question": "Did Studio Pilot 42 pass every mandatory checkpoint?",
+    "sources": [
+      "https://raw.githubusercontent.com/SAMiiNW/signal-tribunal/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/primary-result.txt",
+      "https://cdn.jsdelivr.net/gh/SAMiiNW/signal-tribunal@00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/wire-confirmation.txt"
+    ],
+    "state": "FINAL"
+  }
+}
