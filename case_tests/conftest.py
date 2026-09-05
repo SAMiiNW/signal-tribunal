@@ -4,4 +4,4 @@ def safe(path,*a,**k):
  try:return _unlink(path,*a,**k)
  except PermissionError:return None
 os.unlink=safe
-CONTRACT='contract/signal_tribunal.py'
+CONTRACT='tribunal_core/signal_tribunal.py'
