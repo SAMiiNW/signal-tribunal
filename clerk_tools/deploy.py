@@ -24,10 +24,10 @@ def main():
  code=(ROOT/"tribunal_core/signal_tribunal.py").read_text()
  tx=client.deploy_contract(code=code,args=[])
  print('deploy',tx,flush=True)
- receipt=client.wait_for_transaction_receipt(transaction_hash=tx,status=TransactionStatus.ACCEPTED,retries=120,interval=10000)
+ receipt=client.wait_for_transaction_receipt(transaction_hash=tx,status=TransactionStatus.FINALIZED,retries=180,interval=10000)
  info=client.get_transaction(transaction_hash=tx)
  contract=address(receipt)
- if not contract or info.get('status_name')!='ACCEPTED' or not any(r.get('execution_result')=='SUCCESS' for r in info.get('consensus_data',{}).get('leader_receipt',[])):
+ if not contract or info.get('status_name')!='FINALIZED' or not any(r.get('execution_result')=='SUCCESS' for r in info.get('consensus_data',{}).get('leader_receipt',[])):
   raise RuntimeError({'address':contract,'status':info.get('status_name'),'execution':info.get('tx_execution_result_name')})
  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
  out={'contract':contract,'deploymentTx':tx,'network':'StudioNet','deployer':account.address,'sourceCommit':commit,'evidenceCommit':commit,'evidenceBase':f'https://raw.githubusercontent.com/SAMiiNW/signal-tribunal/{commit}/evidence/','mirrorBase':f'https://cdn.jsdelivr.net/gh/SAMiiNW/signal-tribunal@{commit}/evidence/','appealBase':f'https://github.com/SAMiiNW/signal-tribunal/raw/{commit}/evidence/','receiptStatus':info.get('status_name'),'execution':info.get('tx_execution_result_name') or 'CONTRACT_ADDRESS_RETURNED'}

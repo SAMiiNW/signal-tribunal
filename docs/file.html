@@ -1,1 +1,44 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>File a case · Signal Tribunal</title><link rel="stylesheet" href="./app.css?v=20260908a"></head><body data-page="file"><header class="site-header"><a class="brand" href="./index.html"><span class="brand-mark">ST</span><span>Signal Tribunal<small>Public evidence court</small></span></a><nav aria-label="Main navigation"><a data-nav="home" href="./index.html">Home</a><a data-nav="file" href="./file.html">File case</a><a data-nav="lookup" href="./lookup.html">Lookup</a><a data-nav="guide" href="./guide.html">Guide</a></nav><button class="button compact" id="connect" type="button" data-wallet>Connect wallet</button></header><main class="page-shell"><div class="breadcrumbs"><a href="./index.html">Home</a><span>/</span><span>File a case</span></div><section class="page-intro"><div><p class="eyebrow">STEP 01 · PROPOSAL</p><h1>File a new case</h1></div><p>Define one answerable question and bind it to two independently hosted evidence records.</p></section><div class="workspace"><section class="panel"><h2>Case details</h2><p class="hint">Filing creates a PROPOSED case; it does not issue a ruling.</p><form id="file-form"><label class="field"><span>Unique case ID</span><input id="case-id" data-case-id required maxlength="72" placeholder="SHIPMENT-2026-104"><small>IDs are case-insensitive and cannot be reused.</small></label><label class="field"><span>Question for validators</span><textarea id="question" required maxlength="1000" placeholder="Did shipment 104 arrive before the contractual deadline?"></textarea></label><label class="field"><span>Allowed choices</span><input id="choices" required value="YES, NO"><small>Separate 2–8 choices with commas.</small></label><div class="split"><label class="field"><span>Evidence source A</span><input id="source-a" required type="url" pattern="https://.*" placeholder="https://registry.example/record"></label><label class="field"><span>Evidence source B</span><input id="source-b" required type="url" pattern="https://.*" placeholder="https://wire.example/record"></label></div><label class="field"><span>Challenge window</span><select id="window"><option value="600">10 minutes</option><option value="3600">1 hour</option><option value="86400">24 hours</option></select></label><div class="panel-actions"><button class="button" type="submit">Review in wallet and file</button><a class="button secondary" href="./guide.html">Read the guide</a></div></form><div id="status" class="status-panel hidden"><span class="status-label">TRANSACTION STATUS</span><p data-status-text></p><div id="record" class="record"></div></div></section><aside><div class="sidebar-card"><h3>Before you file</h3><ul><li>Both sources must use HTTPS.</li><li>They must have different hostnames.</li><li>Both must address the same question.</li><li>Do not use private or mutable placeholder URLs.</li></ul></div><div class="sidebar-card"><h3>What happens next?</h3><p>Go to the Review desk and request an assessment. Validators will fetch both records independently.</p></div></aside></div></main><footer><span>Signal Tribunal · StudioNet</span><a href="./review.html">Next: review a case →</a></footer><script type="module" src="./app.js?v=20260908a"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>File a case · Signal Tribunal</title>
+  <link rel="stylesheet" href="./app.css?v=20260914b">
+</head>
+<body data-page="file">
+  <header class="site-header">
+    <a class="brand" href="./index.html"><span class="brand-mark">ST</span><span>Signal Tribunal<small>Public evidence court</small></span></a>
+    <nav aria-label="Main navigation"><a data-nav="home" href="./index.html">Home</a><a data-nav="file" href="./file.html">File case</a><a data-nav="lookup" href="./lookup.html">Lookup</a><a data-nav="guide" href="./guide.html">Guide</a></nav>
+    <button class="button compact" id="connect" type="button" data-wallet>Connect wallet</button>
+  </header>
+  <main class="page-shell">
+    <div class="breadcrumbs"><a href="./index.html">Home</a><span>/</span><span>File a case</span></div>
+    <section class="page-intro"><div><p class="eyebrow">STEP 01 · PROPOSAL</p><h1>File a new case</h1></div><p>Define one answerable question and bind it to two publicly auditable evidence records.</p></section>
+    <div class="workspace">
+      <section class="panel">
+        <h2>Case details</h2>
+        <p class="hint">Filing creates a PROPOSED case and freezes the challenge duration. It does not issue a ruling or start the deadline.</p>
+        <form id="file-form">
+          <label class="field"><span>Unique case ID</span><input id="case-id" data-case-id required maxlength="72" placeholder="SHIPMENT-2026-104"><small>IDs are case-insensitive and cannot be reused.</small></label>
+          <label class="field"><span>Question for validators</span><textarea id="question" required minlength="20" maxlength="1000" placeholder="Did shipment 104 arrive before the contractual deadline?"></textarea></label>
+          <label class="field"><span>Allowed choices</span><input id="choices" required value="YES, NO"><small>Separate 2–8 choices with commas.</small></label>
+          <div class="split">
+            <label class="field"><span>Evidence source A</span><input id="source-a" required type="url" pattern="https://.*" placeholder="https://registry.example/record"></label>
+            <label class="field"><span>Evidence source B</span><input id="source-b" required type="url" pattern="https://.*" placeholder="https://wire.example/record"></label>
+          </div>
+          <label class="field"><span>Challenge duration after assessment</span><select id="window"><option value="600">10 minutes</option><option value="3600">1 hour</option><option value="86400">24 hours</option></select><small>This duration is immutable after filing. The clock starts only when assessment finalizes.</small></label>
+          <div class="panel-actions"><button class="button" type="submit">Review in wallet and file</button><a class="button secondary" href="./guide.html">Read the guide</a></div>
+        </form>
+        <div id="status" class="status-panel hidden"><span class="status-label">TRANSACTION STATUS</span><p data-status-text></p><div id="record" class="record"></div></div>
+      </section>
+      <aside>
+        <div class="sidebar-card"><h3>Before you file</h3><ul><li>Both sources must use HTTPS and different hostnames.</li><li>Hostname separation does not prove independent ownership.</li><li>Verify that genuinely independent publishers control the records.</li><li>Prefer stable, public, versioned records over mutable pages.</li></ul></div>
+        <div class="sidebar-card"><h3>What happens next?</h3><p>Go to the Review desk and request assessment. Validators fetch both records, store their digests, and start the full frozen challenge duration.</p></div>
+      </aside>
+    </div>
+  </main>
+  <footer><span>Signal Tribunal · StudioNet</span><a href="./review.html">Next: review a case →</a></footer>
+  <script type="module" src="./app.js?v=20260914b"></script>
+</body>
+</html>
