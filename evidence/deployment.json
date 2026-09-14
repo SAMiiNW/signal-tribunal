@@ -1,13 +1,13 @@
 {
-  "contract": "0xa7DF3c951D0Cf2D625027d8b5F16d339cD815174",
-  "deploymentTx": "0x9ff4498c7f3e8a5959268b0ef29e9403468ef589a9799771f1799903412752c0",
+  "contract": "0xCc2360351758b16E79A475C257Fb3160490b8CdD",
+  "deploymentTx": "0x0049a3f0f9276ef92d77a753dd17ddd48c461baa400bf1d082b44ee6946f1308",
   "network": "StudioNet",
   "deployer": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
-  "sourceCommit": "00c88ed5bbc85a479918b3cd855fd2769d7b7ebe",
-  "evidenceCommit": "00c88ed5bbc85a479918b3cd855fd2769d7b7ebe",
-  "evidenceBase": "https://raw.githubusercontent.com/SAMiiNW/signal-tribunal/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/",
-  "mirrorBase": "https://cdn.jsdelivr.net/gh/SAMiiNW/signal-tribunal@00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/",
-  "appealBase": "https://github.com/SAMiiNW/signal-tribunal/raw/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/",
-  "receiptStatus": "ACCEPTED",
+  "sourceCommit": "6370ffe00c373ded841a574afbd98813888ba15d",
+  "evidenceCommit": "6370ffe00c373ded841a574afbd98813888ba15d",
+  "evidenceBase": "https://raw.githubusercontent.com/SAMiiNW/signal-tribunal/6370ffe00c373ded841a574afbd98813888ba15d/evidence/",
+  "mirrorBase": "https://cdn.jsdelivr.net/gh/SAMiiNW/signal-tribunal@6370ffe00c373ded841a574afbd98813888ba15d/evidence/",
+  "appealBase": "https://github.com/SAMiiNW/signal-tribunal/raw/6370ffe00c373ded841a574afbd98813888ba15d/evidence/",
+  "receiptStatus": "FINALIZED",
   "execution": "CONTRACT_ADDRESS_RETURNED"
 }

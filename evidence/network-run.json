@@ -1,36 +1,45 @@
 {
-  "resolutionId": "ST-1788573405",
+  "resolutionId": "ST-1789397743",
   "transactions": {
-    "propose": "0x8a2ff95d248f5e42ed7c25f8ef4000615ee7797d3dde5344e042cc6871b2aebd",
-    "assess": "0xf99f5b732affeb2b930abcf5d8637642e599d047869cc66a744064b8fd9115c7",
-    "challenge": "0x2212281422e529325770f1888e30c25f27fd4ae3cd8a4394acb1b20ebbc1ef4c",
-    "finalize": "0x0cb6cd6b6d81caa5fc3b4367304d21e610ef9dfc53f8e6ca34e7841a80f1bed2"
+    "propose": "0x0f858040d6b73125aae3fe68f11de5a89dd3a286bc0ba55b27d0b2b8aea242af",
+    "assess": "0x7524ffac1f0a8d71b8d3d0bb34818cc4905f30f6dee6e91049670c3475fea767",
+    "challenge": "0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e",
+    "finalize": "0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7"
   },
   "state": {
-    "answer": "PASSED",
-    "challengeEnd": 1788574012,
-    "challengeSource": "https://github.com/SAMiiNW/signal-tribunal/raw/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/appeal-record.txt",
+    "answer": "HTTP",
+    "authorities": [
+      "www.rfc-editor.org",
+      "datatracker.ietf.org"
+    ],
+    "challengeAuthority": "developer.mozilla.org",
+    "challengeEnd": 1789398382,
+    "challengeSource": "https://developer.mozilla.org/en-US/docs/Web/HTTP",
+    "challengeWindow": 600,
     "challenger": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
     "choices": [
-      "FAILED",
-      "PASSED"
+      "HTTP",
+      "SMTP"
     ],
     "digests": [
-      "b7385035fb371e54f8d878b43d16ff191c7d51454faf31e8572b91dde69763e5",
-      "21dcd2bfd3fc318ebea3ed0b3217104e42667c87663e634f930f132b03839b71",
-      "09323c11bf2025863dcc921896b4af42c0c5263539ed1b5f6861611e97b40815"
+      "b9cfca26cec14014f18983284f09e1acf5e6ccb9638bc754f3ba49f2ebafa85d",
+      "c9b2c4f04a54696b6b47ac2a1441fc27e38a302efed87a1788c309b2720783f8",
+      "cf12e8278a8b7ca6432bf8f63218b08b3b4431b52fb24254a73675ec42dcf19a"
     ],
     "findings": [
-      "0",
-      "1",
-      "2"
+      "RFC9110"
     ],
-    "id": "ST-1788573405",
+    "id": "ST-1789397743",
+    "latestDigests": [
+      "b9cfca26cec14014f18983284f09e1acf5e6ccb9638bc754f3ba49f2ebafa85d",
+      "c9b2c4f04a54696b6b47ac2a1441fc27e38a302efed87a1788c309b2720783f8",
+      "cf12e8278a8b7ca6432bf8f63218b08b3b4431b52fb24254a73675ec42dcf19a"
+    ],
     "owner": "0xCAFA30BF94D4fb01146588a1b7901BD85E7DbD0f",
-    "question": "Did Studio Pilot 42 pass every mandatory checkpoint?",
+    "question": "Which application protocol is specified by RFC 9110?",
     "sources": [
-      "https://raw.githubusercontent.com/SAMiiNW/signal-tribunal/00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/primary-result.txt",
-      "https://cdn.jsdelivr.net/gh/SAMiiNW/signal-tribunal@00c88ed5bbc85a479918b3cd855fd2769d7b7ebe/evidence/wire-confirmation.txt"
+      "https://www.rfc-editor.org/rfc/rfc9110.txt",
+      "https://datatracker.ietf.org/doc/html/rfc9110"
     ],
     "state": "FINAL"
   }

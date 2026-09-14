@@ -23,8 +23,15 @@ def test_frontend_uses_frozen_window_contract_interface():
 def test_frontend_waits_for_finalized_and_exposes_source_divergence():
     app = (DOCS / 'app.js').read_text(encoding='utf-8')
     assert "status:'FINALIZED'" in app
+    assert "outcome!=='MAJORITY_AGREE'" in app
     assert "state==='SOURCE_DIVERGED'" in app
     assert 'Latest retrieval digests' in app
+
+
+def test_frontend_points_to_current_contract_and_has_no_legacy_console():
+    app = (DOCS / 'app.js').read_text(encoding='utf-8')
+    assert '0xCc2360351758b16E79A475C257Fb3160490b8CdD' in app
+    assert not (DOCS / 'docket-console.js').exists()
 
 
 def test_editable_evidence_and_authority_warning_are_visible():

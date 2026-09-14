@@ -21,4 +21,6 @@ The public application is deliberately split into focused routes instead of one 
 
 Each write screen distinguishes wallet approval, transaction submission, and validator finalization. The filing screen freezes the challenge duration; the review screen cannot replace or shorten it. The lookup screen renders live contract data, stored source authorities, assessment and latest-retrieval digests, and explicit source-divergence state. The example ID is labelled as an example and is not used as hidden application state.
 
+Current StudioNet contract: [`0xCc2360351758b16E79A475C257Fb3160490b8CdD`](https://explorer-studio.genlayer.com/address/0xCc2360351758b16E79A475C257Fb3160490b8CdD). Fresh case `ST-1789397743` completed propose, assess, challenge, and finalize with `MAJORITY_AGREE`; canonical readback is `FINAL / HTTP` with three stored digests. Exact transaction hashes are in `evidence/network-run.json`.
+
 Run `python -m pytest case_tests -q` and `genvm-lint tribunal_core/signal_tribunal.py`. Serve `docket_app/` (or `docs/`) over HTTP and open `index.html`; every route works as an independent page. Clerk tools and full propose, assess, challenge, finalize proof live beside the public docket evidence.
