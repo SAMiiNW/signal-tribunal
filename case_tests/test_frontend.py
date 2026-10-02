@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
@@ -38,3 +39,13 @@ def test_editable_evidence_and_authority_warning_are_visible():
     filing = (DOCS / 'file.html').read_text(encoding='utf-8')
     assert 'id="source-a"' in filing and 'id="source-b"' in filing
     assert 'Hostname separation does not prove independent ownership.' in filing
+
+
+def test_lifecycle_artifact_has_explorer_links_and_finality_records():
+    proof = json.loads((ROOT / 'evidence' / 'network-run.json').read_text(encoding='utf-8'))
+    records = [proof['deployment']] + [proof['transactions'][name] for name in ('propose', 'assess', 'challenge', 'finalize')]
+    for record in records:
+        assert record['explorer'] == f"https://explorer-studio.genlayer.com/transactions/{record['hash']}"
+        assert record['status'] == 'FINALIZED'
+        assert record['consensus'] == 'MAJORITY_AGREE'
+        assert 'SUCCESS' in record['leaderExecutions']

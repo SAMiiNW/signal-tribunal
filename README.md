@@ -23,8 +23,16 @@ The public application is deliberately split into focused routes instead of one 
 
 Each write screen distinguishes wallet approval, transaction submission, and validator finalization. The filing screen freezes the challenge duration; the review screen cannot replace or shorten it. The lookup screen renders live contract data, stored source authorities, assessment and latest-retrieval digests, and explicit source-divergence state. The example ID is labelled as an example and is not used as hidden application state.
 
-Current StudioNet contract: [`0xCc2360351758b16E79A475C257Fb3160490b8CdD`](https://explorer-studio.genlayer.com/address/0xCc2360351758b16E79A475C257Fb3160490b8CdD). Fresh case `ST-1789397743` completed propose, assess, challenge, and finalize with `MAJORITY_AGREE`; canonical readback is `FINAL / HTTP` with three stored digests. Exact transaction hashes are in `evidence/network-run.json`.
+Current StudioNet contract: [`0xCc2360351758b16E79A475C257Fb3160490b8CdD`](https://explorer-studio.genlayer.com/address/0xCc2360351758b16E79A475C257Fb3160490b8CdD). Fresh case `ST-1789397743` completed propose, assess, challenge, and finalize with `MAJORITY_AGREE`; canonical readback is `FINAL / HTTP` with three stored digests.
 
-Published six-page application: https://samiinw-signal-tribunal.pages.dev/
+| Lifecycle record | Verified receipt |
+| --- | --- |
+| Deployment | [`0x0049…1308`](https://explorer-studio.genlayer.com/transactions/0x0049a3f0f9276ef92d77a753dd17ddd48c461baa400bf1d082b44ee6946f1308) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
+| Propose | [`0x0f85…42af`](https://explorer-studio.genlayer.com/transactions/0x0f858040d6b73125aae3fe68f11de5a89dd3a286bc0ba55b27d0b2b8aea242af) — `FINALIZED / MAJORITY_AGREE`, recorded leader executions `SUCCESS, ERROR`; later lifecycle readback proves the proposal persisted |
+| Assess | [`0x7524…a767`](https://explorer-studio.genlayer.com/transactions/0x7524ffac1f0a8d71b8d3d0bb34818cc4905f30f6dee6e91049670c3475fea767) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
+| Challenge | [`0x2eed…c35e`](https://explorer-studio.genlayer.com/transactions/0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
+| Finalize | [`0xbf07…29d7`](https://explorer-studio.genlayer.com/transactions/0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
+
+Canonical six-page application in the currently authorized Cloudflare account: https://signal-tribunal-asu.pages.dev/
 
 Run `python -m pytest case_tests -q` and `genvm-lint tribunal_core/signal_tribunal.py`. Serve `docket_app/` (or `docs/`) over HTTP and open `index.html`; every route works as an independent page. Clerk tools and full propose, assess, challenge, finalize proof live beside the public docket evidence.

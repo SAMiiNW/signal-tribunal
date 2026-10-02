@@ -1,10 +1,59 @@
 {
+  "network": "StudioNet",
+  "contract": "0xCc2360351758b16E79A475C257Fb3160490b8CdD",
+  "explorerContract": "https://explorer-studio.genlayer.com/address/0xCc2360351758b16E79A475C257Fb3160490b8CdD",
+  "deployment": {
+    "hash": "0x0049a3f0f9276ef92d77a753dd17ddd48c461baa400bf1d082b44ee6946f1308",
+    "status": "FINALIZED",
+    "consensus": "MAJORITY_AGREE",
+    "leaderExecutions": [
+      "SUCCESS",
+      "SUCCESS"
+    ],
+    "explorer": "https://explorer-studio.genlayer.com/transactions/0x0049a3f0f9276ef92d77a753dd17ddd48c461baa400bf1d082b44ee6946f1308"
+  },
   "resolutionId": "ST-1789397743",
   "transactions": {
-    "propose": "0x0f858040d6b73125aae3fe68f11de5a89dd3a286bc0ba55b27d0b2b8aea242af",
-    "assess": "0x7524ffac1f0a8d71b8d3d0bb34818cc4905f30f6dee6e91049670c3475fea767",
-    "challenge": "0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e",
-    "finalize": "0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7"
+    "propose": {
+      "hash": "0x0f858040d6b73125aae3fe68f11de5a89dd3a286bc0ba55b27d0b2b8aea242af",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "leaderExecutions": [
+        "SUCCESS",
+        "ERROR"
+      ],
+      "explorer": "https://explorer-studio.genlayer.com/transactions/0x0f858040d6b73125aae3fe68f11de5a89dd3a286bc0ba55b27d0b2b8aea242af"
+    },
+    "assess": {
+      "hash": "0x7524ffac1f0a8d71b8d3d0bb34818cc4905f30f6dee6e91049670c3475fea767",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "leaderExecutions": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "explorer": "https://explorer-studio.genlayer.com/transactions/0x7524ffac1f0a8d71b8d3d0bb34818cc4905f30f6dee6e91049670c3475fea767"
+    },
+    "challenge": {
+      "hash": "0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "leaderExecutions": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "explorer": "https://explorer-studio.genlayer.com/transactions/0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e"
+    },
+    "finalize": {
+      "hash": "0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "leaderExecutions": [
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "explorer": "https://explorer-studio.genlayer.com/transactions/0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7"
+    }
   },
   "state": {
     "answer": "HTTP",
