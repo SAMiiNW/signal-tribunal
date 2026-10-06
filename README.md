@@ -33,6 +33,6 @@ Current StudioNet contract: [`0xCc2360351758b16E79A475C257Fb3160490b8CdD`](https
 | Challenge | [`0x2eed…c35e`](https://explorer-studio.genlayer.com/transactions/0x2eed68cff9d5ea99e334fe67ddf090cf8da49a70c9a8feee10a36dc54881c35e) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
 | Finalize | [`0xbf07…29d7`](https://explorer-studio.genlayer.com/transactions/0xbf07a81ec974395534d38ad1e6dd5162ead72af5dd5468ab1a7b8cb3847629d7) — `FINALIZED / MAJORITY_AGREE / SUCCESS` |
 
-Canonical six-page application in the currently authorized Cloudflare account: https://signal-tribunal-asu.pages.dev/
+Canonical six-page application at the originally submitted production hostname: https://signal-tribunal.pages.dev/
 
 Run `python -m pytest case_tests -q` and `genvm-lint tribunal_core/signal_tribunal.py`. Serve `docket_app/` (or `docs/`) over HTTP and open `index.html`; every route works as an independent page. Clerk tools and full propose, assess, challenge, finalize proof live beside the public docket evidence.
